@@ -1,11 +1,11 @@
 package ru.airux.codegen.handlerbuilder.handler;
 
+import java.io.File;
+
 public record Handler(
-        String context,
+        File directoryRoot,
+        String handlerName,
         String uri,
-        ContentType contentType
+        String objectDeclaration
 ) {
-    enum ContentType {
-        JSON
-    }
 }
